@@ -344,6 +344,7 @@ Transform:
   - {fileID: 2078168706}
   - {fileID: 1503523897}
   - {fileID: 669359507}
+  - {fileID: 1643197868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &187347339
@@ -4970,7 +4971,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.8143816
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4995,7 +4996,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 34.85, y: -1.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6389,6 +6390,7 @@ GameObject:
   - component: {fileID: 704508865}
   - component: {fileID: 704508867}
   - component: {fileID: 704508866}
+  - component: {fileID: 704508868}
   m_Layer: 0
   m_Name: Room3_RightSwitch1
   m_TagString: Untagged
@@ -6508,6 +6510,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &704508868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704508864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec969503a871b4088cbc369a92ee60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
+  interactionRange: 2
 --- !u!1 &716744548
 GameObject:
   m_ObjectHideFlags: 0
@@ -12241,6 +12257,7 @@ GameObject:
   - component: {fileID: 1273210894}
   - component: {fileID: 1273210896}
   - component: {fileID: 1273210895}
+  - component: {fileID: 1273210897}
   m_Layer: 0
   m_Name: Room3_TopSwitch1
   m_TagString: Untagged
@@ -12360,6 +12377,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1273210897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273210893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec969503a871b4088cbc369a92ee60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
+  interactionRange: 2
 --- !u!1 &1326575712
 GameObject:
   m_ObjectHideFlags: 0
@@ -12631,6 +12662,7 @@ GameObject:
   - component: {fileID: 1503523897}
   - component: {fileID: 1503523899}
   - component: {fileID: 1503523898}
+  - component: {fileID: 1503523900}
   m_Layer: 0
   m_Name: Room3_BottomSwitch1
   m_TagString: Untagged
@@ -12750,6 +12782,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1503523900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503523896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec969503a871b4088cbc369a92ee60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
+  interactionRange: 2
 --- !u!1 &1515036445
 GameObject:
   m_ObjectHideFlags: 0
@@ -13681,6 +13727,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1643197867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643197868}
+  - component: {fileID: 1643197869}
+  m_Layer: 0
+  m_Name: SwitchCheckerThing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643197868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643197867}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.29, y: -1.52, z: -0.35572848}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 184575396}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1643197869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643197867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3731b370bdeb9a3458cabcc4485bec9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switches:
+  - {fileID: 1995159022}
+  - {fileID: 704508864}
+  - {fileID: 1273210893}
+  - {fileID: 1503523896}
 --- !u!1 &1686011332
 GameObject:
   m_ObjectHideFlags: 0
@@ -18726,6 +18821,7 @@ GameObject:
   - component: {fileID: 1995159023}
   - component: {fileID: 1995159025}
   - component: {fileID: 1995159024}
+  - component: {fileID: 1995159026}
   m_Layer: 0
   m_Name: Room3_LeftSwitch1
   m_TagString: Untagged
@@ -18845,6 +18941,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1995159026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995159022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ec969503a871b4088cbc369a92ee60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
+  interactionRange: 2
 --- !u!1 &2053371549
 GameObject:
   m_ObjectHideFlags: 0
