@@ -6,7 +6,9 @@ public class TriggerScript : MonoBehaviour
 {
     public BoxCollider2D trigger;
     private RoomRotation roomRotation;
-    public bool startRotate;
+    public Transform room;
+
+    public bool startRotate = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,22 +19,14 @@ public class TriggerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startRotate)
-        {
-            roomRotation.startRoomRotation();
-        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
     {
         if (trigger.CompareTag("Player"))
         {
-            Debug.Log("Trigger object is null.");
             startRotate = true;
-        }
-        else
-        {
-            
         }
     }
 }

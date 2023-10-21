@@ -5,7 +5,6 @@ using UnityEngine;
 public class buttonHandler : MonoBehaviour
 {
     public BoxCollider2D button; // The GameObject to activate
-    public BoxCollider2D door;
     private bool canActivate = false;
 
     public RoomRotation roomRotation;
@@ -23,7 +22,6 @@ public class buttonHandler : MonoBehaviour
         if (canActivate && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("activate");
-            door.isTrigger = true;
             roomRotation.StopRoomRotation();
         }
     }
