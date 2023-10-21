@@ -27,7 +27,7 @@ public class RoomRotation : MonoBehaviour
         }
         else
         {
-            startRoomRotation();
+            
         }
     }
 

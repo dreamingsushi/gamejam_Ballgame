@@ -7,7 +7,7 @@ public class buttonHandler : MonoBehaviour
     public BoxCollider2D button; // The GameObject to activate
     public BoxCollider2D door;
     private bool canActivate = false;
-    public Transform roomToRotate;
+
     public RoomRotation roomRotation;
     
 
