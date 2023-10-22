@@ -13,6 +13,7 @@ public class SwitchLogic : MonoBehaviour
 
     private SwitchChecker switchChecker;
     public GameObject checker;
+    public AudioSource clickSound;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class SwitchLogic : MonoBehaviour
             if (!isActivated)
             {
                 Debug.Log("Activated");
-
+                clickSound.Play();
                 isActivated = true;
                 switchChecker.GetValue(1);
             }

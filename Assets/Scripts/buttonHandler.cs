@@ -7,6 +7,7 @@ public class buttonHandler : MonoBehaviour
     public BoxCollider2D button; // The GameObject to activate
     private bool canActivate = false;
     public RoomRotation roomRotation;
+    public AudioSource clickSound;
     
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class buttonHandler : MonoBehaviour
         if (canActivate && Input.GetKeyDown(KeyCode.E))
         {
             roomRotation.StopRoomRotation();
+            clickSound.Play();
         }
     }
 

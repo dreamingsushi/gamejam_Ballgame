@@ -15,7 +15,7 @@ public class RoomRotation : MonoBehaviour
     
 
     public bool levelComplete = false;
-    private bool stopRotation = false;
+    public bool stopRotation = false;
     
     public Vector3 rotationAxis = Vector3.up;
     

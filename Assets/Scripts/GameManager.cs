@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject OpenSlidingPuzzleGameObject;
     public GameObject CurrentPlayerLocation;
 
+    public GameObject VictoryChecker;
+    private CheckWinGame checkWinGame;
+
     private List<Transform> pieces;
     private int emptyLocation;
     private int size;
@@ -63,6 +66,7 @@ public class GameManager : MonoBehaviour
         pieces = new List<Transform>();
         size = 4;
         CreateGamePieces(0.01f);
+        checkWinGame = VictoryChecker.GetComponent<CheckWinGame>();
     }
 
     // Update is called once per frame
@@ -81,6 +85,7 @@ public class GameManager : MonoBehaviour
                 OpenSlidingPuzzleGameObject.SetActive(false);
                 CurrentPlayerLocation.SetActive(true);
                 Camera.main.transform.parent = GameObject.FindWithTag("Player").transform;
+                checkWinGame.CheckVictoryCondition(1);
             }
         }
 
