@@ -3013,6 +3013,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46335a751c3b704c8cec117356764bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  roomRotation: {fileID: 790095527}
 --- !u!61 &759994814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4886,7 +4888,7 @@ Transform:
   m_GameObject: {fileID: 1152544900}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.99, y: 1.98, z: -0.07281893}
+  m_LocalPosition: {x: -5.09, y: 0.54999995, z: -0.07281893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5365,7 +5367,7 @@ Transform:
   m_GameObject: {fileID: 1591997504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.58, y: -2.88, z: 0.07281893}
+  m_LocalPosition: {x: 18.41, y: -1.45, z: 0.07281893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5530,7 +5532,7 @@ Transform:
   m_GameObject: {fileID: 1634726558}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.53, y: 2.9, z: -0.07281893}
+  m_LocalPosition: {x: -1.6300011, y: 1.47, z: -0.07281893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6345,8 +6347,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785871730}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.53, y: 1.89, z: -0.07281893}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.4300003, y: 0.45999992, z: -0.07281893}
   m_LocalScale: {x: 11.971616, y: 10.098081, z: 1.0619}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class buttonHandler : MonoBehaviour
 {
-    private BoxCollider2D button; // The GameObject to activate
+    public BoxCollider2D button; // The GameObject to activate
     private bool canActivate = false;
-    private RoomRotation roomRotation;
+    public RoomRotation roomRotation;
     
 
     // Start is called before the first frame update
