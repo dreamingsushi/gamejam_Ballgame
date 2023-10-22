@@ -5,8 +5,10 @@ using UnityEngine;
 public class doorScript : MonoBehaviour
 {
     public BoxCollider2D doorCollider;
+    [SerializeField] private BoxCollider2D invisibleCollider;
     public Transform ball;
     public Transform teleportPos;
+    public RoomRotation roomRotation;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,11 @@ public class doorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (roomRotation.levelComplete)
+        {
+            doorCollider.isTrigger = true;
+            invisibleCollider.isTrigger = true;
+        }
     }
     private void OnTriggerEnter2D(Collider2D doorCollider)
     {

@@ -13,6 +13,7 @@ public class PressurePlateSet : MonoBehaviour
         {
             localPressurePlateCount++;
             PressureItemCount.Instance.UpdateDoorState(pressurePlateID, localPressurePlateCount);
+            
         }
     }
 

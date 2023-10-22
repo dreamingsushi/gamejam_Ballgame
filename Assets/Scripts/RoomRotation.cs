@@ -8,8 +8,8 @@ public class RoomRotation : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     [SerializeField] private GameObject theFog;
 
-    public BoxCollider2D door;
-    public BoxCollider2D invisibleCollider;
+    [SerializeField] private BoxCollider2D door;
+    [SerializeField] private BoxCollider2D invisibleCollider;
 
     [SerializeField] private Transform room;
     
@@ -39,21 +39,14 @@ public class RoomRotation : MonoBehaviour
         else if (triggerScript.startRotate)
         {
             startRoomRotation();
-
         }
-        if (levelComplete)
-        {
-            door.isTrigger = true;
-            invisibleCollider.isTrigger = true;
-        }
-
-
     }
 
     public void StopRoomRotation()
     {
         room.rotation = Quaternion.RotateTowards(room.rotation, Quaternion.identity, rotationSpeed * Time.deltaTime);
         stopRotation = true;
+        
         if (room.rotation == Quaternion.identity)
         {
             levelComplete = true;
