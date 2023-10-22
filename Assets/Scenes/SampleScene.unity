@@ -6181,7 +6181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &669359507
 Transform:
   m_ObjectHideFlags: 0
@@ -6523,6 +6523,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
+  IsSwitchOn: {fileID: 0}
+  IsSwitchOff: {fileID: 0}
   interactionRange: 2
 --- !u!1 &716744548
 GameObject:
@@ -11999,7 +12001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1080141295
 Transform:
   m_ObjectHideFlags: 0
@@ -12390,6 +12392,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
+  IsSwitchOn: {fileID: 2078168705}
+  IsSwitchOff: {fileID: 1273210893}
   interactionRange: 2
 --- !u!1 &1326575712
 GameObject:
@@ -12795,6 +12799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
+  IsSwitchOn: {fileID: 0}
+  IsSwitchOff: {fileID: 0}
   interactionRange: 2
 --- !u!1 &1515036445
 GameObject:
@@ -13771,11 +13777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3731b370bdeb9a3458cabcc4485bec9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switches:
-  - {fileID: 1995159022}
-  - {fileID: 704508864}
-  - {fileID: 1273210893}
-  - {fileID: 1503523896}
 --- !u!1 &1686011332
 GameObject:
   m_ObjectHideFlags: 0
@@ -18954,6 +18955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
+  IsSwitchOn: {fileID: 0}
+  IsSwitchOff: {fileID: 0}
   interactionRange: 2
 --- !u!1 &2053371549
 GameObject:
@@ -19101,7 +19104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2078168706
 Transform:
   m_ObjectHideFlags: 0
@@ -19185,7 +19188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2131267565
 Transform:
   m_ObjectHideFlags: 0

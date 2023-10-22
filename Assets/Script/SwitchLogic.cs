@@ -7,6 +7,9 @@ public class SwitchLogic : MonoBehaviour
 {
     public bool isActivated = false;
 
+    public GameObject IsSwitchOn;
+    public GameObject IsSwitchOff;
+
     private bool canInteract = false;
 
     public float interactionRange = 2f;
@@ -23,6 +26,9 @@ public class SwitchLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        IsSwitchOn.SetActive(false);
+
+
         /*switchState = 0;
 
         switchImage = GetComponent<Button>().image;
@@ -43,6 +49,8 @@ public class SwitchLogic : MonoBehaviour
         {
             ActivateSwitch();
         }
+
+        
     }
 
     public void ActivateSwitch()
@@ -76,5 +84,23 @@ public class SwitchLogic : MonoBehaviour
                 ActivateSwitch();
             }
         } */
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if(IsSwitchOn.activeSelf) 
+                {
+                    IsSwitchOn.SetActive(false);
+                }
+                else if(!IsSwitchOn.activeSelf) 
+                {
+                    IsSwitchOn.SetActive(true);
+                }
+            }
+        }
     }
 }
