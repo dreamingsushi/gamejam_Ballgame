@@ -8,6 +8,7 @@ public class PressureItemCount : MonoBehaviour
 
     private int[] pressurePlateCounts;  // An array to store counts for each pressure plate.
     public GameObject door;
+    public RoomRotation roomRotation;
 
     private void Awake()
     {
@@ -36,7 +37,11 @@ public class PressureItemCount : MonoBehaviour
                 break;
             }
         }
-        door.SetActive(!shouldOpenDoor);
+        if (shouldOpenDoor == true)
+        {
+            roomRotation.StopRoomRotation();
+        }
+        
     }
     // Start is called before the first frame update
     void Start()

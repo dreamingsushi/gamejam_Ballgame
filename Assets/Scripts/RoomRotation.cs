@@ -11,10 +11,10 @@ public class RoomRotation : MonoBehaviour
     public BoxCollider2D door;
     public BoxCollider2D invisibleCollider;
 
-    private Transform room;
+    [SerializeField] private Transform room;
     
 
-    private bool levelComplete = false;
+    public bool levelComplete = false;
     private bool stopRotation = false;
     
     public Vector3 rotationAxis = Vector3.up;
@@ -39,13 +39,15 @@ public class RoomRotation : MonoBehaviour
         else if (triggerScript.startRotate)
         {
             startRoomRotation();
-        }
 
+        }
         if (levelComplete)
         {
             door.isTrigger = true;
             invisibleCollider.isTrigger = true;
         }
+
+
     }
 
     public void StopRoomRotation()

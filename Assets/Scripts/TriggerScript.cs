@@ -6,6 +6,7 @@ public class TriggerScript : MonoBehaviour
 {
     public BoxCollider2D trigger;
 
+    public RoomRotation roomRotation;
     public bool startRotate = false;
 
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class TriggerScript : MonoBehaviour
         if (trigger.CompareTag("Player"))
         {
             startRotate = true;
+            roomRotation.levelComplete = false;
         }
     }
 }
