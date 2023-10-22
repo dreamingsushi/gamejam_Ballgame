@@ -5,8 +5,6 @@ using UnityEngine;
 public class TriggerScript : MonoBehaviour
 {
     public BoxCollider2D trigger;
-    private RoomRotation roomRotation;
-    public Transform room;
 
     public bool startRotate = false;
 

@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class buttonHandler : MonoBehaviour
 {
-    public BoxCollider2D button; // The GameObject to activate
+    private BoxCollider2D button; // The GameObject to activate
     private bool canActivate = false;
-
-    public RoomRotation roomRotation;
+    private RoomRotation roomRotation;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        button = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -21,7 +20,6 @@ public class buttonHandler : MonoBehaviour
     {
         if (canActivate && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("activate");
             roomRotation.StopRoomRotation();
         }
     }
@@ -31,7 +29,6 @@ public class buttonHandler : MonoBehaviour
         if (button.CompareTag("Player")) // Adjust the tag to match your player's tag
         {
             canActivate = true;
-            Debug.Log("Player entered the button's collider.");
         }
     }
 
@@ -40,7 +37,6 @@ public class buttonHandler : MonoBehaviour
         if (button.CompareTag("Player")) // Adjust the tag to match your player's tag
         {
             canActivate = false;
-            Debug.Log("Player exited the button's collider.");
         }
     }
 }

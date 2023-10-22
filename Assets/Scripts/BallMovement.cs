@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    [SerializeField] public float ballSpeed;
+    [SerializeField] public float ballSpeed = 5;
     [SerializeField] private CircleCollider2D ballCollider;
     private Rigidbody2D rb;
     private bool grounded;
@@ -13,6 +13,7 @@ public class BallMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0f;
         ballCollider = GetComponent<CircleCollider2D>();
     }
     void Update()
