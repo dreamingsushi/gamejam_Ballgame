@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PressurePlateBehavior : MonoBehaviour
 {
-    public bool isActivated = false;
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Step"))
         {
@@ -15,7 +14,8 @@ public class PressurePlateBehavior : MonoBehaviour
             }
         }
     }
-
+    public bool isActivated = false;
+    
     public void ActivateLever()
     {
         isActivated = true;

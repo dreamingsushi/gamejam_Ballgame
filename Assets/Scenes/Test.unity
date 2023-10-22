@@ -559,8 +559,9 @@ GameObject:
   m_Component:
   - component: {fileID: 697639874}
   - component: {fileID: 697639873}
+  - component: {fileID: 697639875}
   m_Layer: 0
-  m_Name: pressurecount
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,7 +574,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697639872}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e2abef78b1561e4ea84415bcff95997, type: 3}
   m_Name: 
@@ -599,6 +600,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697639875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697639872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7723f2e424e6ad84f8bf9842883723ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 512684389}
 --- !u!1 &720538442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,6 +1579,7 @@ GameObject:
   - component: {fileID: 1234302340}
   - component: {fileID: 1234302339}
   - component: {fileID: 1234302338}
+  - component: {fileID: 1234302342}
   m_Layer: 0
   m_Name: PressurePlate (1)
   m_TagString: Untagged
@@ -1601,10 +1616,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00045746565, y: 0.43837532}
+  m_Offset: {x: -0.00045746565, y: 0.0040467978}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1615,7 +1630,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75764465, y: 0.11639625}
+  m_Size: {x: 0.75764465, y: 0.7491238}
   m_EdgeRadius: 0
 --- !u!114 &1234302339
 MonoBehaviour:
@@ -1624,7 +1639,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234302337}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17802c9dbc582a64daa3b799f63e6925, type: 3}
   m_Name: 
@@ -1697,6 +1712,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1234302342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234302337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cff36426afbd07469a3286ed2ba1fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressurePlateID: 1
 --- !u!1 &1248504489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2161,6 +2189,7 @@ GameObject:
   - component: {fileID: 1615435653}
   - component: {fileID: 1615435652}
   - component: {fileID: 1615435651}
+  - component: {fileID: 1615435655}
   m_Layer: 0
   m_Name: PressurePlate (2)
   m_TagString: Untagged
@@ -2197,10 +2226,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019107759, y: -0.44136184}
+  m_Offset: {x: -0.0019107759, y: -0.00083744526}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2211,7 +2240,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7457184, y: 0.12165514}
+  m_Size: {x: 0.7457184, y: 0.7520287}
   m_EdgeRadius: 0
 --- !u!114 &1615435652
 MonoBehaviour:
@@ -2220,7 +2249,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615435650}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17802c9dbc582a64daa3b799f63e6925, type: 3}
   m_Name: 
@@ -2293,6 +2322,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1615435655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615435650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cff36426afbd07469a3286ed2ba1fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressurePlateID: 2
 --- !u!1 &1755011615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,6 +2347,7 @@ GameObject:
   - component: {fileID: 1755011618}
   - component: {fileID: 1755011617}
   - component: {fileID: 1755011616}
+  - component: {fileID: 1755011620}
   m_Layer: 0
   m_Name: PressurePlate (3)
   m_TagString: Untagged
@@ -2341,10 +2384,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0019112229, y: -0.43371826}
+  m_Offset: {x: -0.0019112229, y: -0.00056658685}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2355,7 +2398,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7457186, y: 0.13694283}
+  m_Size: {x: 0.7457186, y: 0.7525711}
   m_EdgeRadius: 0
 --- !u!114 &1755011617
 MonoBehaviour:
@@ -2364,7 +2407,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755011615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17802c9dbc582a64daa3b799f63e6925, type: 3}
   m_Name: 
@@ -2437,6 +2480,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1755011620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755011615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cff36426afbd07469a3286ed2ba1fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressurePlateID: 3
 --- !u!1 &1853668865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,6 +2589,7 @@ GameObject:
   - component: {fileID: 1950374481}
   - component: {fileID: 1950374483}
   - component: {fileID: 1950374484}
+  - component: {fileID: 1950374485}
   m_Layer: 0
   m_Name: PressurePlate
   m_TagString: Untagged
@@ -2614,7 +2671,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950374480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17802c9dbc582a64daa3b799f63e6925, type: 3}
   m_Name: 
@@ -2649,10 +2706,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00083979964, y: 0.43107566}
+  m_Offset: {x: 0.00083979964, y: -0.00023259223}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2663,8 +2720,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75122005, y: 0.13028318}
+  m_Size: {x: 0.75122005, y: 0.74222517}
   m_EdgeRadius: 0
+--- !u!114 &1950374485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950374480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cff36426afbd07469a3286ed2ba1fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressurePlateID: 0
 --- !u!1 &1997107022
 GameObject:
   m_ObjectHideFlags: 0

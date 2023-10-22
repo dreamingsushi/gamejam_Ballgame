@@ -35,7 +35,7 @@ public class PressureCount : MonoBehaviour
             AllBooleanCheck = true;
         }
 
-        if (AllBooleanCheck)
+        if (AllBooleanCheck )
         {
             door.SetActive(false);
         }
