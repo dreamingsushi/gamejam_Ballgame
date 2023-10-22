@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SwitchChecker : MonoBehaviour
 {
-    //public List<GameObject> switches;
-    //private SwitchLogic switchLogic;
-    //private bool AllBooleanCheck = false;
+    public List<GameObject> switches;
 
+    private SwitchLogic switchLogic;
 
+    private bool AllBooleanCheck = false;
+    private int booleanCheck = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +18,6 @@ public class SwitchChecker : MonoBehaviour
         //{
         //    switchLogic = obj.GetComponent<SwitchLogic>();
         //}
-
-
-
-
     }
 
     // Update is called once per frame
@@ -35,16 +32,15 @@ public class SwitchChecker : MonoBehaviour
         //    AllBooleanCheck = true;
         //}
 
-        //if (AllBooleanCheck)
-        //{
-        //    Debug.Log("Cleared");
-        //}
+        if (booleanCheck >= 4)
+        {
+            Debug.Log("Cleared");
+        }
+    }
 
-
-
-
-
-
-
+    public void GetValue(int value)
+    {
+        booleanCheck += value;
+        Debug.Log(booleanCheck.ToString());
     }
 }

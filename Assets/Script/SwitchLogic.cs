@@ -7,12 +7,12 @@ public class SwitchLogic : MonoBehaviour
 {
     public bool isActivated = false;
 
-    public GameObject IsSwitchOn;
-    public GameObject IsSwitchOff;
-
-    private bool canInteract = false;
-
+    //private bool canInteract = false;
+    public bool canPress = false;
     public float interactionRange = 2f;
+
+    private SwitchChecker switchChecker;
+    public GameObject checker;
     /*[SerializeField]
     private GameObject switcher;
 
@@ -26,9 +26,8 @@ public class SwitchLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IsSwitchOn.SetActive(false);
-
-
+        switchChecker = checker.GetComponent<SwitchChecker>();
+        //IsSwitchOn.SetActive(false);
         /*switchState = 0;
 
         switchImage = GetComponent<Button>().image;
@@ -43,7 +42,7 @@ public class SwitchLogic : MonoBehaviour
         switchImage.sprite = switchSprites[switchState];
     } */
 
-    private void OnMouseDown()
+    /* private void OnMouseDown()
     {
         if (!isActivated) 
         {
@@ -51,22 +50,22 @@ public class SwitchLogic : MonoBehaviour
         }
 
         
-    }
+    } */
 
-    public void ActivateSwitch()
-    {
-        isActivated = true;
-    }
-
-    /*private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             canInteract = true;
+            if (Input.GetKeyDown(KeyCode.E)) 
+            {
+                isActivated = true;
+                Debug.Log("Activated");
+            }
         }
-    }
+    } */
 
-    private void OnTriggerExit(Collider other)
+    /*private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Other"))
         {
@@ -74,33 +73,27 @@ public class SwitchLogic : MonoBehaviour
         }
     } */
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*if (canInteract && Input.GetKeyDown(KeyCode.E))
-        {
-            if (!isActivated)
-            {
-                ActivateSwitch();
-            }
-        } */
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if(IsSwitchOn.activeSelf) 
-                {
-                    IsSwitchOn.SetActive(false);
-                }
-                else if(!IsSwitchOn.activeSelf) 
-                {
-                    IsSwitchOn.SetActive(true);
-                }
-            }
+            canPress = true;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+        if (canPress && Input.GetKeyDown(KeyCode.E))
+        {
+            if (!isActivated)
+            {
+                Debug.Log("Activated");
+
+                isActivated = true;
+                switchChecker.GetValue(1);
+            }
+        } 
     }
 }
