@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,6 +40,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnClickExit()
     {
+        EditorApplication.isPlaying= false;
         Application.Quit();
     }
 }
